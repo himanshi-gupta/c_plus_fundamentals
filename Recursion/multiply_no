@@ -1,0 +1,25 @@
+/*
+multiply 2 no.s without *
+*/
+#include <iostream>
+using namespace std;
+int mul(int n,int m)
+{  
+    if(m==0)
+    {
+        return 0;
+    }
+    if(m>0)
+    {
+        return n+mul(n,m-1);   
+    }
+    else
+    {
+        return (0-n)+mul(n,m+1);
+    }
+}
+int main() {
+    int n,m;
+    cin>>n>>m;
+    cout<<mul(n,m);
+}
